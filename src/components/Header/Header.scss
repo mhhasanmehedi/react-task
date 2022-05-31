@@ -1,0 +1,69 @@
+// variable
+@import "../../variable";
+
+// Header component style
+.header-wrapper {
+  background-color: $primary-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  .header-inner {
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .header-left {
+      width: 89px;
+      height: 47px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .search-field {
+        width: 441px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #ffffff;
+        input {
+          width: 390px;
+          height: 100%;
+          border: none;
+          outline: none;
+          padding: 10px;
+          font-weight: 400;
+          font-size: 15px;
+          color: #ffffff;
+          background-color: transparent;
+          &::placeholder {
+            color: white;
+          }
+        }
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+      .add-product-btn {
+        display: inline-block;
+        width: 164px;
+        height: 54px;
+        padding: 15px 35px 16px;
+        font-weight: 500;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        color: $primary-color;
+        background: #f7f5f2;
+        text-transform: capitalize;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+}
