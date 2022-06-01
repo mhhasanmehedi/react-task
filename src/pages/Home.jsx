@@ -1,27 +1,37 @@
-import React from "react";
-import Header from "../components/Header/Header";
-import Piechart from "../components/Piechart/Piechart";
-import "./Home.scss";
-import productData from "../assets/data/data.json";
+import React from 'react';
+import Header from '../components/Header/Header';
+import Piechart from '../components/Piechart/Piechart';
+import './Home.scss';
+import productData from '../assets/data/data.json';
 
 const Home = () => {
   return (
     <>
       <Header />
-      <Piechart />
+      <div className='container'>
+        <Piechart />
+      </div>
       <div
+        className='container'
         style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "20px",
-          flexWrap: "wrap",
+          display: 'flex',
+          alignItems: 'center',
+          gap: '20px',
+          flexWrap: 'wrap',
+          marginTop: '50px',
+          marginBottom: '50px',
         }}
       >
-        {productData.map((pd) => (
+        {productData.map((pd, index) => (
           <span
-            style={{ background: "yellow", height: "100px", width: "200px" }}
+            style={{
+              background: 'rgb(24 219 165)',
+              height: '100px',
+              width: '386px',
+            }}
           >
-            {pd.seller_name}
+            {`Id: ${index + 1}`} <br />
+            {`Name: ${pd.seller_name}`}
           </span>
         ))}
       </div>
