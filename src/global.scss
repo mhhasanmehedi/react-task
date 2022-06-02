@@ -1,5 +1,5 @@
 // variable
-@import "./variable";
+@import './variable';
 
 *,
 *::after,
@@ -14,10 +14,15 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
 }
