@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logo.svg";
 import Search from "../../assets/images/search.svg";
 import AddProductModal from "../AddProductModal/AddProductModal";
 
-const Header = () => {
+const Header = ({ setQuery }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -18,7 +18,12 @@ const Header = () => {
           </div>
           <div className="header-right">
             <div className="search-field">
-              <input type="text" placeholder="Search by Title or Brand" />
+              <input
+                type="text"
+                className="search"
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search by Title or Brand"
+              />
               <img src={Search} alt="Search" />
             </div>
             <button className="add-product-btn" onClick={handleOpen}>

@@ -1,36 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import './Piechart.scss';
-import Chart from 'react-apexcharts';
-import productData from '../../assets/data/data.json';
+import React from "react";
+import "./Piechart.scss";
+import Chart from "react-apexcharts";
+
+import productData from "../../assets/data/data.json";
 
 const Piechart = () => {
-  const [sellerName, setSellerName] = useState([]);
-  const [phonePercentage, setPhonePercentage] = useState([]);
-  useEffect(() => {
-    const sName = [];
-    const pPercentage = [];
-    const data = productData;
-    for (let i = 0; i < data.length; i++) {
-      sName.push(data[i].seller_name);
-      pPercentage.push(data[i]);
-    }
-
-    setSellerName(sName);
-    setPhonePercentage(pPercentage);
-  }, []);
+  const daraz = productData.filter((ele) => ele.seller_name === "Daraz");
+  const pickaboo = productData.filter((ele) => ele.seller_name === "Pickaboo");
+  // const bikroy = productData.filter((ele) => ele.seller_name === "Bikroy");
 
   return (
     <>
-      <div className='piechart-container'>
-        <h3>Welcome to Piechart</h3>
+      <div className="piechart-container">
         <Chart
-          type='pie'
+          type="pie"
           width={432}
-          height='550'
-          series={[35, 30, 35]}
+          height={334}
+          series={[daraz.length, pickaboo.length, 2]}
           options={{
-            title: { text: 'Sources' },
-            labels: ['Daraz', 'Bikroy', 'Picaboo'],
+            title: { text: "Sources", style: { fontSize: 24 } },
+            labels: ["Daraz", "Picaboo", "Bikroy"],
           }}
         ></Chart>
       </div>

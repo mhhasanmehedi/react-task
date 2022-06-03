@@ -19,8 +19,8 @@ const AddProductModal = ({ open, handleClose }) => {
     setSelectedOptions(data);
   }
   return (
-    <div class="modal" style={{ display: open ? "block" : "none" }}>
-      <div class="modal-content">
+    <div className="modal" style={{ display: open ? "block" : "none" }}>
+      <div className="modal-content">
         <div className="modal__top">
           <h3>Add Product</h3>
           <img src={Cross} alt="Cross icon" onClick={handleClose} />

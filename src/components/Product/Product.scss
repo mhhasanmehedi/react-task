@@ -10,6 +10,11 @@
       width: 100%;
       object-fit: cover;
     }
+    #react-modal-image-img {
+      height: 100%;
+      width: 500px;
+      object-fit: cover;
+    }
   }
   h3 {
     font-weight: 600;
@@ -30,9 +35,8 @@
   gap: 5px;
   flex-wrap: wrap;
   span {
+    padding: 0px 3px;
     height: 26px;
-    background: rgba(221, 158, 16, 0.1);
-    border: 0.5px solid #dd9e10;
     border-radius: 2px;
   }
 }
