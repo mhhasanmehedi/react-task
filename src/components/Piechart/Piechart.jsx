@@ -7,7 +7,9 @@ import productData from "../../assets/data/data.json";
 const Piechart = () => {
   const daraz = productData.filter((ele) => ele.seller_name === "Daraz");
   const pickaboo = productData.filter((ele) => ele.seller_name === "Pickaboo");
-  // const bikroy = productData.filter((ele) => ele.seller_name === "Bikroy");
+  const GadgetGear = productData.filter(
+    (ele) => ele.seller_name === "Gadget & Gear"
+  );
 
   return (
     <>
@@ -16,7 +18,7 @@ const Piechart = () => {
           type="pie"
           width={432}
           height={334}
-          series={[daraz.length, pickaboo.length, 2]}
+          series={[daraz.length, pickaboo.length, GadgetGear.length]}
           options={{
             title: { text: "Sources", style: { fontSize: 24 } },
             labels: ["Daraz", "Picaboo", "Bikroy"],
