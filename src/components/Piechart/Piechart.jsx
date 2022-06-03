@@ -21,7 +21,7 @@ const Piechart = () => {
           series={[daraz.length, pickaboo.length, GadgetGear.length]}
           options={{
             title: { text: "Sources", style: { fontSize: 24 } },
-            labels: ["Daraz", "Picaboo", "Bikroy"],
+            labels: ["Daraz", "Picaboo", "Gadget & Gear"],
           }}
         ></Chart>
       </div>
