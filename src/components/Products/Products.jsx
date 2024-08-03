@@ -19,21 +19,9 @@ const Products = ({ search }) => {
           </div>
         </div>
         <div className="products">
-          <table id="customers">
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Ram/Rom</th>
-                <th>Tag</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {search(ProductsData).map((data, index) => (
-                <Product data={data} key={index} />
-              ))}
-            </tbody>
-          </table>
+          {search(ProductsData).map((data, index) => (
+            <Product data={data} key={index} />
+          ))}
         </div>
       </div>
     </div>

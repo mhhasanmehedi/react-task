@@ -1,6 +1,10 @@
 .chart {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 100px 0;
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  .chart {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

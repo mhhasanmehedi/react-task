@@ -4,6 +4,7 @@ import Chart from "react-apexcharts";
 import "./BarChart.scss";
 
 const BarChart = () => {
+  console.log(productData.length);
   const official = productData.filter((ele) => ele.official_warranty === true);
   const unofficial = productData.filter(
     (ele) => ele.unofficial_warranty === true
